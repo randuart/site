@@ -58,6 +58,16 @@
       z-index: 1;
     }
 
+    .button:hover {
+      animation: wiggle 0.4s ease-in-out;
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(3deg); }
+      75% { transform: rotate(-3deg); }
+    }
+
     .support-btn {
       background-color: #ff6ec7;
       color: white;
@@ -85,15 +95,15 @@
       opacity: 0.15;
       z-index: 0;
       animation: float 4s ease-in-out infinite alternate;
+      will-change: transform;
     }
 
     @keyframes float {
-      0% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(-40px) translateX(15px); }
-      100% { transform: translateY(0) translateX(0); }
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-40px); }
     }
 
-    /* Generate 16 shapes with different sizes, positions, colors, and delays */
+    /* Shapes 1–16 */
     .shape1  { width: 180px; height: 180px; background: #ff6ec7;  top: -50px; left: -50px; animation-delay: 0s; }
     .shape2  { width: 140px; height: 140px; background: #6ecbff;  bottom: 20px; right: -30px; animation-delay: 0.2s; }
     .shape3  { width: 100px; height: 100px; background: #c0ffa8;  top: 40%; left: -60px; animation-delay: 0.4s; }
@@ -165,6 +175,20 @@
 
   <a href="mailto:yay@randuart.com" class="button support-btn">Contact Support</a>
   <a href="https://linktr.ee/randuart" class="button shop-btn" target="_blank">Shop</a>
+
+  <!-- Mouse movement blob interaction -->
+  <script>
+    document.addEventListener('mousemove', (e) => {
+      const shapes = document.querySelectorAll('.shape');
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+      shapes.forEach((shape, i) => {
+        const intensity = (i + 1) / shapes.length;
+        shape.style.transform = `translate(${x * intensity}px, ${y * intensity}px)`;
+      });
+    });
+  </script>
 
 </body>
 </html>
