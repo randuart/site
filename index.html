@@ -6,23 +6,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #fff4a3; /* brighter, happy pastel yellow */
+      background: #fff4a3;
       font-family: 'Quicksand', sans-serif;
       text-align: center;
       padding: 120px 40px;
       color: #333;
+      position: relative;
+      overflow: hidden;
     }
 
     h1 {
       font-size: 4em;
       margin-bottom: 30px;
       font-weight: 700;
+      position: relative;
+      z-index: 1;
     }
 
     p {
       font-size: 2.2em;
       margin-bottom: 70px;
       font-weight: 500;
+      position: relative;
+      z-index: 1;
     }
 
     .button {
@@ -35,6 +41,8 @@
       border-radius: 18px;
       transition: all 0.3s ease;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
     }
 
     .support-btn {
@@ -56,9 +64,56 @@
     .shop-btn:hover {
       background-color: #91dbff;
     }
+
+    /* Cute background shapes */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    .shape1 {
+      width: 200px;
+      height: 200px;
+      background: #ff6ec7;
+      top: -60px;
+      left: -60px;
+    }
+
+    .shape2 {
+      width: 150px;
+      height: 150px;
+      background: #6ecbff;
+      bottom: -40px;
+      right: -40px;
+    }
+
+    .shape3 {
+      width: 120px;
+      height: 120px;
+      background: #c0ffa8;
+      top: 50%;
+      left: -80px;
+      transform: translateY(-50%);
+    }
+
+    .shape4 {
+      width: 180px;
+      height: 180px;
+      background: #ffdf6b;
+      bottom: 20%;
+      right: 10%;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Background shapes -->
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
+  <div class="shape shape4"></div>
 
   <h1>Welcome to Randuart</h1>
   <p>This is the official website of Storkbite LLC.</p>
