@@ -84,23 +84,32 @@
       border-radius: 50%;
       opacity: 0.15;
       z-index: 0;
-      animation: float 6s ease-in-out infinite alternate;
+      animation: float 4s ease-in-out infinite alternate;
     }
 
     @keyframes float {
       0% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(-30px) translateX(10px); }
+      50% { transform: translateY(-40px) translateX(15px); }
       100% { transform: translateY(0) translateX(0); }
     }
 
-    .shape1 { width: 180px; height: 180px; background: #ff6ec7; top: -50px; left: -50px; animation-delay: 0s; }
-    .shape2 { width: 140px; height: 140px; background: #6ecbff; bottom: 20px; right: -30px; animation-delay: 1s; }
-    .shape3 { width: 100px; height: 100px; background: #c0ffa8; top: 40%; left: -60px; animation-delay: 2s; }
-    .shape4 { width: 160px; height: 160px; background: #ffdf6b; bottom: 20%; right: 10%; animation-delay: 3s; }
-    .shape5 { width: 120px; height: 120px; background: #ffaacc; top: 60%; left: 70%; animation-delay: 4s; }
-    .shape6 { width: 130px; height: 130px; background: #a0e7ff; top: 10%; right: 20%; animation-delay: 5s; }
-    .shape7 { width: 90px; height: 90px; background: #baffc9; bottom: 35%; left: 15%; animation-delay: 6s; }
-    .shape8 { width: 150px; height: 150px; background: #ffdac1; bottom: -50px; right: 40%; animation-delay: 7s; }
+    /* Generate 16 shapes with different sizes, positions, colors, and delays */
+    .shape1  { width: 180px; height: 180px; background: #ff6ec7;  top: -50px; left: -50px; animation-delay: 0s; }
+    .shape2  { width: 140px; height: 140px; background: #6ecbff;  bottom: 20px; right: -30px; animation-delay: 0.2s; }
+    .shape3  { width: 100px; height: 100px; background: #c0ffa8;  top: 40%; left: -60px; animation-delay: 0.4s; }
+    .shape4  { width: 160px; height: 160px; background: #ffdf6b;  bottom: 20%; right: 10%; animation-delay: 0.6s; }
+    .shape5  { width: 120px; height: 120px; background: #ffaacc;  top: 60%; left: 70%; animation-delay: 0.8s; }
+    .shape6  { width: 130px; height: 130px; background: #a0e7ff;  top: 10%; right: 20%; animation-delay: 1s; }
+    .shape7  { width: 90px;  height: 90px;  background: #baffc9;  bottom: 35%; left: 15%; animation-delay: 1.2s; }
+    .shape8  { width: 150px; height: 150px; background: #ffdac1;  bottom: -50px; right: 40%; animation-delay: 1.4s; }
+    .shape9  { width: 100px; height: 100px; background: #ffd6e0;  top: 30%; right: 5%; animation-delay: 1.6s; }
+    .shape10 { width: 130px; height: 130px; background: #d5faff;  bottom: 60%; left: 5%; animation-delay: 1.8s; }
+    .shape11 { width: 110px; height: 110px; background: #ffe6a7;  top: 80px; left: 40%; animation-delay: 2s; }
+    .shape12 { width: 90px;  height: 90px;  background: #c1ffd7;  bottom: 10%; right: 30%; animation-delay: 2.2s; }
+    .shape13 { width: 115px; height: 115px; background: #ffb3de;  top: 75%; right: 15%; animation-delay: 2.4s; }
+    .shape14 { width: 140px; height: 140px; background: #aee8ff;  top: 15%; left: 20%; animation-delay: 2.6s; }
+    .shape15 { width: 125px; height: 125px; background: #ffd3b6;  bottom: 45%; left: 60%; animation-delay: 2.8s; }
+    .shape16 { width: 105px; height: 105px; background: #d9ffe7;  bottom: -60px; right: 5%; animation-delay: 3s; }
 
     /* Wavy borders */
     .wave-top,
@@ -124,7 +133,6 @@
       left: 0;
       background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100' viewBox='0 0 1440 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff4a3' d='M0,32L80,42.7C160,53,320,75,480,69.3C640,64,800,32,960,26.7C1120,21,1280,43,1360,53.3L1440,64V100H1360C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100H0Z'%3E%3C/path%3E%3C/svg%3E");
     }
-
   </style>
 </head>
 <body>
@@ -142,6 +150,14 @@
   <div class="shape shape6"></div>
   <div class="shape shape7"></div>
   <div class="shape shape8"></div>
+  <div class="shape shape9"></div>
+  <div class="shape shape10"></div>
+  <div class="shape shape11"></div>
+  <div class="shape shape12"></div>
+  <div class="shape shape13"></div>
+  <div class="shape shape14"></div>
+  <div class="shape shape15"></div>
+  <div class="shape shape16"></div>
 
   <!-- Content -->
   <h1>Welcome to Randuart</h1>
